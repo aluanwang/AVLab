@@ -1,6 +1,6 @@
-#N canvas 914 275 405 273 10;
+#N canvas 410 307 544 257 10;
 #X obj 174 4 sel 0 1;
-#X obj 174 -42 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 174 -42 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 174 27 destroy;
 #X obj 174 82 gemwin;
@@ -47,7 +47,7 @@
 #X obj 197 73 s totex;
 #X msg 60 156 open rect.vert;
 #X msg 33 211 open rect.frag;
-#X obj 144 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 144 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 302 177 gemmouse 1 1;
 #X obj 302 259 expr ($f1*8)-4;
