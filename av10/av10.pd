@@ -1,4 +1,5 @@
-#N canvas 882 233 224 376 10;
+#N canvas 882 233 435 391 10;
+#X declare -path /Users/aluan/AVLab/av10;
 #X obj -82 77 gemwin;
 #X msg -101 24 destroy;
 #X obj -101 -3 sel 0 1;
@@ -913,6 +914,8 @@
 #X obj -5 271 runcircle 13;
 #X obj -5 293 runcircle 14;
 #X obj -5 316 runcircle 15;
+#X obj -47 -5 loadbang;
+#X obj -35 78 declare -path /Users/aluan/AVLab/av10;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 2 1 5 0;
@@ -933,3 +936,4 @@
 #X connect 22 0 23 0;
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;
+#X connect 26 0 3 0;

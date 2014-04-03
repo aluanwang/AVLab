@@ -1,9 +1,10 @@
-#N canvas 820 211 332 413 10;
+#N canvas 820 211 450 393 10;
+#X declare -path /Users/aluan/AVLab/av8;
 #X obj -92 67 gemwin;
 #X msg -111 14 destroy;
 #X obj -111 -13 sel 0 1;
 #X obj -111 -34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #N canvas 577 177 606 450 draw-rect 0;
 #X obj 75 56 gemhead;
 #X obj 75 5 r mouseLeft;
@@ -182,8 +183,6 @@
 #X obj 117 121 catch~ l;
 #X obj 138 149 catch~ r;
 #X obj 117 219 dac~;
-#X msg -92 36 reset \, FSAA 8 \, color 0.58 0.58 0.6 \, create \, 1
-;
 #X obj -118 164 linklink 0;
 #X obj -39 164 division 0;
 #X obj -117 187 linklink 1;
@@ -208,12 +207,17 @@
 #X obj 34 340 division 14;
 #X obj 138 196 *~ 0.5;
 #X obj 117 176 *~ 0.5;
+#X obj -66 7 declare -path /Users/aluan/AVLab/av8;
+#X obj -82 -33 loadbang;
+#X msg -92 36 reset \, FSAA 8 \, border 0 \, offset 100 100 \, color
+0.58 0.58 0.6 \, create \, 1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
-#X connect 2 1 9 0;
+#X connect 2 1 35 0;
 #X connect 3 0 2 0;
-#X connect 6 0 33 0;
-#X connect 7 0 32 0;
-#X connect 9 0 0 0;
-#X connect 32 0 8 1;
-#X connect 33 0 8 0;
+#X connect 6 0 32 0;
+#X connect 7 0 31 0;
+#X connect 31 0 8 1;
+#X connect 32 0 8 0;
+#X connect 34 0 3 0;
+#X connect 35 0 0 0;

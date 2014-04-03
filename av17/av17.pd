@@ -1,23 +1,24 @@
-#N canvas 821 387 161 286 10;
+#N canvas 963 388 332 282 10;
+#X declare -path /Users/aluan/AVLab/av17;
 #X obj 42 35 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 1 1
 ;
 #X obj 42 12 loadbang;
-#N canvas 765 85 445 440 gemwin 0;
+#N canvas 728 215 445 440 gemwin 0;
 #X msg 13 153 destroy;
 #X obj 13 120 sel 0 1;
 #X obj 13 94 inlet;
 #X obj 34 215 gemwin 30;
 #X obj 127 248 s radio;
-#X msg 35 179 reset \, FSAA 8 \, color 0 0 0 \, dimen 500 500 \, create
-\, 1;
 #X msg 127 220 500 500;
+#X msg 35 179 reset \, FSAA 8 \, color 0.2 0.2 0.2 \, border 0 \, offset
+100 100 \, dimen 500 500 \, create \, 1;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
-#X connect 1 1 5 0;
 #X connect 1 1 6 0;
+#X connect 1 1 5 0;
 #X connect 2 0 1 0;
-#X connect 5 0 3 0;
-#X connect 6 0 4 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
 #X restore 42 72 pd gemwin;
 #X obj -38 160 catch~ circleL;
 #X obj -9 190 catch~ circleR;
@@ -48,8 +49,6 @@
 #X obj -547 393 rectangle 8 4;
 #X obj -547 35 gemhead 30;
 #X msg -475 34 format RGBA \, color 0 0 0 0 \, dimen 500 500;
-#X msg -587 153 open circle.vert;
-#X msg -614 208 open circle.frag;
 #X obj -382 111 s totex;
 #X obj -308 129 c-circle 0;
 #X obj -307 157 c-circle 1;
@@ -71,6 +70,8 @@
 #X obj -227 345 c-circle 18;
 #X obj -227 375 c-circle 19;
 #X obj -228 317 c-circle 17;
+#X msg -587 153 open av17/circle.vert;
+#X msg -614 208 open av17/circle.frag;
 #X connect 0 0 18 0;
 #X connect 1 0 10 0;
 #X connect 2 0 0 0;
@@ -87,17 +88,17 @@
 #X connect 11 0 2 0;
 #X connect 11 1 5 0;
 #X connect 12 0 13 0;
-#X connect 12 1 23 0;
+#X connect 12 1 21 0;
 #X connect 13 0 1 0;
 #X connect 14 0 16 0;
-#X connect 15 0 22 0;
-#X connect 15 1 21 0;
+#X connect 15 0 43 0;
+#X connect 15 1 42 0;
 #X connect 16 0 15 0;
 #X connect 17 0 20 0;
 #X connect 19 0 12 0;
 #X connect 20 0 12 0;
-#X connect 21 0 10 0;
-#X connect 22 0 11 0;
+#X connect 42 0 10 0;
+#X connect 43 0 11 0;
 #X restore 39 134 pd texture;
 #X msg -23 111 \$1 3000;
 #N canvas 357 259 506 331 gui 0;
@@ -234,6 +235,7 @@
 #X connect 12 0 10 0;
 #X connect 14 0 1 0;
 #X restore 42 93 pd gui;
+#X obj 16 250 declare -path /Users/aluan/AVLab/av17;
 #X connect 0 0 2 0;
 #X connect 0 0 10 0;
 #X connect 1 0 0 0;
