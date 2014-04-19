@@ -60,9 +60,9 @@
 #X obj 144 182 p2l 7;
 #X obj 145 202 p2l 8;
 #X obj 145 221 p2l 9;
-#X msg 39 6 dimen 1200 600 \, FSAA 4 \, color 0.55 0.55 0.55 \, create
+#X msg 39 6 dimen 500 500 \, FSAA 4 \, color 0.55 0.55 0.55 \, create
 \, 1;
-#X obj 39 89 expr ($f1*16)-8;
+#X obj 39 89 expr ($f1*8)-4;
 #X connect 0 0 51 0;
 #X connect 0 1 6 0;
 #X connect 0 2 37 0;
