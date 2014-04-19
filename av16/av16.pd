@@ -1,4 +1,5 @@
-#N canvas 788 149 297 249 10;
+#N canvas 794 442 503 265 10;
+#X declare -path /Users/aluan/AVLab/av16;
 #X obj 14 -26 s-rect 0;
 #X obj 143 25 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -6,7 +7,6 @@
 #X obj 143 62 t f f;
 #X msg 143 113 destroy;
 #X obj 143 164 gemwin;
-#X msg 162 140 create \, 1;
 #N canvas 583 130 793 601 gemwin 0;
 #X obj -23 -172 gemmouse 1 1;
 #X obj -23 -137 expr $f1*8-4;
@@ -266,10 +266,15 @@
 #X obj 76 127 s-rect 17;
 #X obj 76 148 s-rect 18;
 #X obj 76 168 s-rect 19;
+#X obj 11 192 declare -path /Users/aluan/AVLab/av16;
+#X obj 146 -5 loadbang;
+#X msg 162 140 reset \, border 0 \, offset 100 100 \, color 0.3 0.3
+0.3 \, create \, 1;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
-#X connect 2 1 6 0;
+#X connect 2 1 29 0;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;
-#X connect 6 0 5 0;
-#X connect 8 0 5 0;
+#X connect 7 0 5 0;
+#X connect 28 0 1 0;
+#X connect 29 0 5 0;

@@ -1,4 +1,5 @@
-#N canvas 706 66 362 474 10;
+#N canvas 860 302 362 474 10;
+#X declare -path /Users/aluan/AVLab/av12;
 #X obj -585 113 gemwin;
 #X msg -604 60 destroy;
 #X obj -604 33 sel 0 1;
@@ -8,7 +9,7 @@
 #X msg -469 41 \; pd dsp 1;
 #X msg -585 82 reset \, FSAA 8 \, color 0.95 0.95 0.95 \, create \,
 1;
-#N canvas 220 22 1185 744 clock 1;
+#N canvas 223 370 1185 744 clock 0;
 #X obj 280 71 repeat 12;
 #X obj 280 98 t a b;
 #X obj 307 122 f;
@@ -383,6 +384,8 @@
 #X obj -328 334 Rslider 9;
 #X obj -328 358 Rslider 10;
 #X obj -328 380 Rslider 11;
+#X obj -481 194 declare -path /Users/aluan/AVLab/av12;
+#X obj -580 11 loadbang;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 2 1 6 0;
@@ -407,3 +410,4 @@
 #X connect 23 0 25 0;
 #X connect 24 0 23 0;
 #X connect 25 0 22 0;
+#X connect 41 0 3 0;
