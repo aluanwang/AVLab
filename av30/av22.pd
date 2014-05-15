@@ -64,7 +64,7 @@
 #X obj 24 85 table b1y 300;
 #X obj 24 106 table b2x 300;
 #X obj 24 127 table b2y 300;
-#N canvas 550 406 450 300 random 1;
+#N canvas 550 406 450 300 random 0;
 #X obj 100 18 inlet;
 #X obj 100 47 repeat 300;
 #X obj 100 82 f;
@@ -94,7 +94,7 @@
 #X obj 349 185 f;
 #X obj 375 185 + 1;
 #X obj 404 185 % 300;
-#N canvas 291 302 507 464 bezierVertex 1;
+#N canvas 291 302 507 464 bezierVertex 0;
 #X obj 233 -21 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 146 64 GEMglBegin;
