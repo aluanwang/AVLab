@@ -1,5 +1,4 @@
 #N canvas 963 388 332 282 10;
-#X declare -path /Users/aluan/AVLab/av17;
 #X obj 42 35 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 1 1
 ;
 #X obj 42 12 loadbang;
@@ -26,7 +25,7 @@
 #X obj -38 220 *~;
 #X obj -9 222 *~;
 #X obj -23 135 line~;
-#N canvas 747 263 591 450 texture 0;
+#N canvas 921 286 591 450 texture 0;
 #X obj -547 366 pix_texture;
 #X obj -547 120 alpha;
 #X obj -547 314 glsl_program;
@@ -70,8 +69,8 @@
 #X obj -227 345 c-circle 18;
 #X obj -227 375 c-circle 19;
 #X obj -228 317 c-circle 17;
-#X msg -587 153 open av17/circle.vert;
-#X msg -614 208 open av17/circle.frag;
+#X msg -587 153 open circle.vert;
+#X msg -614 208 open circle.frag;
 #X connect 0 0 18 0;
 #X connect 1 0 10 0;
 #X connect 2 0 0 0;
@@ -235,7 +234,6 @@
 #X connect 12 0 10 0;
 #X connect 14 0 1 0;
 #X restore 42 93 pd gui;
-#X obj 16 250 declare -path /Users/aluan/AVLab/av17;
 #X connect 0 0 2 0;
 #X connect 0 0 10 0;
 #X connect 1 0 0 0;
