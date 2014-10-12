@@ -1,4 +1,4 @@
-#N canvas 794 442 503 265 10;
+#N canvas 794 442 646 247 10;
 #X obj 14 -26 s-rect 0;
 #X obj 143 25 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -266,8 +266,8 @@
 #X obj 76 148 s-rect 18;
 #X obj 76 168 s-rect 19;
 #X obj 146 -5 loadbang;
-#X msg 162 140 reset \, border 0 \, offset 100 100 \, color 0.3 0.3
-0.3 \, create \, 1;
+#X msg 162 140 reset \, border 0 \, offset 100 100 \, FSAA 8 \, color
+0.3 0.3 0.3 \, create \, 1;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
 #X connect 2 1 28 0;
