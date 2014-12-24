@@ -1,5 +1,4 @@
 #N canvas 671 274 634 358 10;
-#X declare -path /Users/aluan/AVLab/av5;
 #X obj 100 66 gemwin;
 #X msg 79 7 destroy;
 #X obj 281 230 dac~;
@@ -27,7 +26,6 @@
 #X obj 184 191 tga_tri 13;
 #X obj 183 213 tga_tri 14;
 #X obj 52 239 tga_tri 15;
-#X obj 180 6 declare -path /Users/aluan/AVLab/av5;
 #X obj 146 65 loadbang;
 #X msg 100 33 reset \, FSAA 8 \, border 0 \, offset 100 100 \, color
 0.99 0.29 0.53 \, create \, 1;
@@ -40,5 +38,5 @@
 #X connect 6 0 8 1;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
-#X connect 28 0 29 0;
-#X connect 29 0 0 0;
+#X connect 27 0 28 0;
+#X connect 28 0 0 0;
