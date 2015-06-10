@@ -300,6 +300,8 @@
 #X obj 47 14 loadbang;
 #X msg 48 91 reset \, border 0 \, offset 100 100 \, color 0.82 0.82
 0.82 \, create \, 1;
+#X obj 245 325 loadbang;
+#X msg 245 347 \; pd dsp 1;
 #X connect 1 0 0 0;
 #X connect 3 0 6 0;
 #X connect 3 1 41 0;
@@ -351,3 +353,4 @@
 #X connect 61 0 58 1;
 #X connect 63 0 5 0;
 #X connect 64 0 0 0;
+#X connect 65 0 66 0;

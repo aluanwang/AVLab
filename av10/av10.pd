@@ -306,7 +306,7 @@
 #X obj -57 -115 t f f f;
 #X obj -57 -68 sel 0;
 #X obj -57 -159 r tganum-1;
-#X obj 56 -34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 56 -34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 91 -143 sel 1;
 #X msg 91 -121 1;
@@ -368,7 +368,7 @@
 #X floatatom -106 68 5 0 0 0 - - -;
 #X floatatom -23 68 5 0 0 0 - - -;
 #X obj -46 -45 metro 500;
-#X obj -46 -69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj -46 -69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 5 -70 5 0 0 0 - - -;
 #X obj -124 213 outlet;
@@ -555,7 +555,7 @@
 #X restore 150 -1 pd time;
 #X obj 169 -31 invert;
 #X obj 150 -52 pipe 120;
-#X obj 150 -28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 150 -28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 359 89 translateXYZ;
 #X obj 229 123 loadbang;
@@ -566,7 +566,7 @@
 #X floatatom 246 -119 5 0 0 0 - - -;
 #X obj 359 8 gemhead 1000;
 #X obj 246 -97 t f f f;
-#X obj 359 -16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 359 -16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 394 -125 sel 1;
 #X msg 394 -103 1;
@@ -624,7 +624,7 @@
 #X floatatom -106 68 5 0 0 0 - - -;
 #X floatatom -23 68 5 0 0 0 - - -;
 #X obj -46 -45 metro 500;
-#X obj -46 -69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj -46 -69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X floatatom 5 -70 5 0 0 0 - - -;
 #X obj -124 213 outlet;
@@ -817,7 +817,7 @@
 #X restore 453 17 pd time;
 #X obj 472 -13 invert;
 #X obj 453 -34 pipe 120;
-#X obj 453 -10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 453 -10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 246 -141 r tganum-2;
 #X obj 246 -50 sel 8;

@@ -64,7 +64,7 @@
 #X obj 514 90 sel 1;
 #X floatatom 672 178 5 0 0 0 - - -;
 #X msg 687 121 0;
-#X obj 514 207 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 514 207 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 540 288 + 1;
 #X obj 571 287 % 2;
@@ -579,12 +579,13 @@
 #X restore -31 123 pd bg;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array edge 10 float 3;
-#A 0 -3.204 -2.684 0 0 0 0 0 0 0 0;
+#A 0 -3.396 -3.06 -2.436 -1.692 -0.996001 0.076 0.508 1.236 1.828 2.068
+;
 #X coords 0 -4 9 4 100 50 1 0 0;
 #X restore -35 -12 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array size 10 float 3;
-#A 0 0.296 0.224 0.392 1.688 0.296 0.368 0.528 0.288 0.416 0.536;
+#A 0 0.104 0.232 0.392 0.352 0.344 0.056 0.376 0.352 0.24 0;
 #X coords 0 -4 9 4 100 50 1 0 0;
 #X restore 80 -12 graph;
 #X obj -31 146 newrect 0;
@@ -601,9 +602,12 @@
 #X obj -78 -23 loadbang;
 #X msg -82 46 reset \, border 0 \, offset 100 100 \, FSAA 8 \, create
 \, 1;
+#X obj 124 138 loadbang;
+#X msg 124 161 \; pd dsp 1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X connect 2 1 21 0;
 #X connect 3 0 2 0;
 #X connect 20 0 3 0;
 #X connect 21 0 0 0;
+#X connect 22 0 23 0;
