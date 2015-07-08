@@ -27,12 +27,12 @@
 #X obj 213 201 s gem-tgl;
 #X obj 103 143 p2l 0;
 #X obj 78 -53 k_cpu;
-#N canvas 914 414 450 300 gui 0;
+#N canvas 914 414 450 300 gui 1;
 #X obj 124 38 hid;
 #X obj 124 -8 loadbang;
 #X obj 124 65 route key;
 #X obj 124 92 s hid;
-#X msg 124 13 open keyboard 1 \, 1;
+#X msg 124 13 open keyboard 0 \, 1;
 #X connect 0 0 2 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
