@@ -1,5 +1,5 @@
-#N canvas 963 388 332 282 10;
-#X obj 42 35 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 1 1
+#N canvas 879 199 229 358 10;
+#X obj 42 35 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 0 1
 ;
 #X obj 42 12 loadbang;
 #N canvas 728 215 445 440 gemwin 0;
@@ -21,7 +21,7 @@
 #X restore 42 72 pd gemwin;
 #X obj -38 160 catch~ circleL;
 #X obj -9 190 catch~ circleR;
-#X obj -38 244 dac~;
+#X obj -38 329 dac~;
 #X obj -38 220 *~;
 #X obj -9 222 *~;
 #X obj -23 135 line~;
@@ -234,13 +234,16 @@
 #X connect 12 0 10 0;
 #X connect 14 0 1 0;
 #X restore 42 93 pd gui;
+#X obj -38 249 st-pureverb /key;
 #X connect 0 0 2 0;
 #X connect 0 0 10 0;
 #X connect 1 0 0 0;
 #X connect 3 0 6 0;
 #X connect 4 0 7 0;
-#X connect 6 0 5 0;
-#X connect 7 0 5 1;
+#X connect 6 0 12 0;
+#X connect 7 0 12 1;
 #X connect 8 0 6 1;
 #X connect 8 0 7 1;
 #X connect 10 0 8 0;
+#X connect 12 0 5 0;
+#X connect 12 1 5 1;
