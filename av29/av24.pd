@@ -1,0 +1,137 @@
+#N canvas 708 94 561 538 10;
+#X obj -14 45 gemwin;
+#X obj 163 512 s mouse;
+#X msg -28 -5 destroy;
+#X msg -14 18 reset \, color 0.5 0.5 0.5 \, dimen 500 500 \, FSAA 8
+\, create \, 1;
+#X floatatom 163 426 5 0 0 0 - - -;
+#X msg 163 488 0 \$1;
+#X obj -13 70 target 0;
+#X obj -11 120 target 2;
+#X obj -13 93 target 1;
+#X obj -11 143 target 3;
+#X obj 210 114 s resetbang;
+#X obj 210 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 541 387 524 302 init 0;
+#X obj 89 215 t a;
+#X obj 89 33 loadbang;
+#X msg 143 100 mass fix 0 10 0;
+#X obj 89 241 s \$0-in;
+#X obj 89 59 t b b b b b;
+#X msg 161 80 reset;
+#X obj 44 13 inlet;
+#X msg 125 120 mass mob 1 10 0 \, mass mob 1 10 0 \, mass mob 1 10
+0;
+#X obj 161 37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 89 187 Xmax 255 \, Xmin 0;
+#X msg 107 143 link souple 1 0 1 3 \, link souple 1 2 1 3 \, link souple
+3 2 1 3;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 4 0 9 0;
+#X connect 4 1 10 0;
+#X connect 4 2 7 0;
+#X connect 4 3 2 0;
+#X connect 4 4 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;
+#X connect 7 0 0 0;
+#X connect 8 0 4 0;
+#X connect 9 0 0 0;
+#X connect 10 0 0 0;
+#X restore 73 188 pd init;
+#X obj 74 330 s \$0-out;
+#X obj 74 281 r \$0-in;
+#X obj 240 219 vsl 15 127 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 6300 1;
+#X obj 208 377 s \$0-in;
+#X msg 208 354 posX fix \$1;
+#N canvas 565 515 355 193 compute 0;
+#X obj 159 37 inlet;
+#X obj 159 74 metro 20;
+#X obj 159 135 s \$0-in;
+#X msg 159 104 bang \, massesPosL;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X restore 73 256 pd compute;
+#X obj 73 239 tgl 15 0 empty empty ON/OFF 25 10 1 10 -262144 -1 -1
+1 1;
+#X obj 209 142 r \$0-out;
+#X obj 73 171 bng 15 250 50 0 empty empty reset 25 10 1 10 -262144
+-1 -1;
+#X obj 209 166 route massesPosL;
+#X obj 259 219 vsl 15 127 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 6300 1;
+#X obj 278 219 vsl 15 127 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 6300 1;
+#X obj 209 187 unpack f f f f;
+#X obj 74 305 pmpd;
+#X obj 73 219 loadbang;
+#X obj 208 217 vsl 15 127 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 6300 1;
+#X obj 355 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 355 178 t b b;
+#X obj 390 231 random 2;
+#X obj 390 256 sel 0 1;
+#X msg 389 282 1;
+#X msg 417 282 -1;
+#X obj 355 279 *;
+#X obj 355 429 line;
+#X obj 355 208 random 10;
+#X obj 355 234 + 20;
+#X obj 355 309 + 63.5;
+#X floatatom 355 452 5 0 0 0 - - -;
+#X msg 355 406 \$1 \, 63.5 100;
+#X obj 355 335 t f f;
+#X obj 355 359 pipe 100;
+#X msg 383 382 63.5 \, \$1 100;
+#X obj 163 403 k_range 0 127 3 -3;
+#X obj 163 468 line;
+#X floatatom 204 481 5 0 0 0 - - -;
+#X msg 163 445 \$1 100;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 48 0;
+#X connect 5 0 1 0;
+#X connect 11 0 10 0;
+#X connect 14 0 26 0;
+#X connect 17 0 16 0;
+#X connect 19 0 18 0;
+#X connect 20 0 22 0;
+#X connect 21 0 12 0;
+#X connect 22 0 25 0;
+#X connect 24 0 45 0;
+#X connect 25 1 15 0;
+#X connect 25 2 23 0;
+#X connect 25 3 24 0;
+#X connect 26 0 13 0;
+#X connect 27 0 19 0;
+#X connect 28 0 17 0;
+#X connect 29 0 30 0;
+#X connect 30 0 37 0;
+#X connect 30 1 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 32 1 34 0;
+#X connect 33 0 35 1;
+#X connect 34 0 35 1;
+#X connect 35 0 39 0;
+#X connect 36 0 40 0;
+#X connect 37 0 38 0;
+#X connect 38 0 35 0;
+#X connect 39 0 42 0;
+#X connect 40 0 28 0;
+#X connect 41 0 36 0;
+#X connect 42 0 43 0;
+#X connect 42 1 44 0;
+#X connect 43 0 41 0;
+#X connect 44 0 36 0;
+#X connect 45 0 4 0;
+#X connect 46 0 5 0;
+#X connect 46 0 47 0;
+#X connect 48 0 46 0;
