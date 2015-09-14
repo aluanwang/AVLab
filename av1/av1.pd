@@ -1,4 +1,4 @@
-#N canvas 940 180 561 435 10;
+#N canvas 676 216 561 435 10;
 #X declare -path /Users/aluan/AVLab/av1;
 #X obj 40 93 gemmouse 1 1;
 #X obj 40 177 pack f f;
@@ -27,12 +27,12 @@
 #X obj 214 209 invert;
 #X obj 214 232 s gem-tgl;
 #X obj 104 174 p2l 0;
-#N canvas 914 414 450 300 gui 0;
+#N canvas 914 414 450 300 gui 1;
 #X obj 124 38 hid;
 #X obj 124 -8 loadbang;
 #X obj 124 65 route key;
 #X obj 124 92 s hid;
-#X msg 124 13 open keyboard 0 \, 1;
+#X msg 124 12 open keyboard 1 \, 1;
 #X connect 0 0 2 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;

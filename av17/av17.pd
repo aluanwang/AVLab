@@ -1,5 +1,5 @@
 #N canvas 879 199 229 358 10;
-#X obj 42 35 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 0 1
+#X obj 42 35 tgl 30 0 empty empty empty 17 7 0 10 -258113 -1 -1 1 1
 ;
 #X obj 42 12 loadbang;
 #N canvas 728 215 445 440 gemwin 0;
