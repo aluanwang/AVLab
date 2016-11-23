@@ -32,8 +32,8 @@
 #X obj 309 564 sel 1;
 #X obj 309 540 change;
 #X obj 416 711 s trigger_line;
-#X floatatom 276 199 5 0 0 0 - - -;
-#X obj 276 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X floatatom 276 199 5 0 0 0 - - -, f 5;
+#X obj 324 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 276 221 t f f f f f f;
 #X obj 364 451 * -1;
@@ -48,7 +48,7 @@
 #X msg 651 338 64;
 #X obj 548 493 r \$0-pitch;
 #X obj 548 518 mtof;
-#X floatatom 548 539 5 0 0 0 - - -;
+#X floatatom 548 539 5 0 0 0 - - -, f 5;
 #X obj 370 553 t b b b;
 #X obj 255 607 t b b;
 #X obj 255 655 del 100;
@@ -105,12 +105,12 @@ souple 3 2 1 \$1;
 -1 -1;
 #X obj -64 146 route massesPosL;
 #X obj 17 194 vsl 15 127 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 5472 1;
+-1 -1 8108 1;
 #X obj -64 167 unpack f f f f;
 #X obj -16 664 pmpd;
 #X obj -17 578 loadbang;
 #X obj -65 197 vsl 15 127 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 5472 1;
+-1 -1 8108 1;
 #X obj -31 415 k_range 0 3 0 127;
 #X obj 58 373 k_range 0 127 0 3;
 #X obj 131 275 circle 0.08;
@@ -194,7 +194,7 @@ souple 3 2 1 \$1;
 #X connect 29 0 48 0;
 #X connect 30 0 29 0;
 #X connect 32 0 68 0;
-#X connect 33 0 6 0;
+#X connect 33 0 38 0;
 #X connect 34 0 7 0;
 #X connect 34 1 37 2;
 #X connect 34 2 1 2;
